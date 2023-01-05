@@ -10,7 +10,7 @@ export default function About() {
         <meta name="description" content="Loafsprout is a Filipino artist who specializes in semi-realistic portraits."/>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      <main className={styles.main}>
+      <main>
       <Navbar/>
       </main>
     </>

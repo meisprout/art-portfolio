@@ -29,18 +29,22 @@ export default function Home({...props}) {
       <main className={styles.main}>
         <header className={styles.header}>
           <img src={props.hero.cover}/>
-          <div className={styles.content}>
+          <div className={styles.heading}>
             <h1>{props.hero.title}</h1>
             <p>{props.hero.description}</p>
-            <Link href='/works' class="button">See my work</Link>
+            <Link href='/works' class="button purple-btn">See my work</Link>
           </div>
         </header>
         <section className={styles.section}>
-          <div>
+          <div className={styles.content}>
             <h2>{props.section.title}</h2>
             <p>{props.section.description}</p>
+            <Link href='/commissions' class="button white-btn">See commission details</Link>
           </div>
-          <img src={props.section.cover}/>
+          <div className={styles.container}>
+            <img src={props.section.cover}/>
+          </div>
+          
         </section>
       </main>
     </>

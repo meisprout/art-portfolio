@@ -2,6 +2,7 @@ import React from 'react';
 import ReactMarkdown from 'react-markdown'
 import { getAllWorks, getSinglePost } from "../../lib/notion"
 import styles from '../../styles/Works.module.css'
+import Navbar from '../navbar'
 
 export const getStaticPaths = async () => {
     const posts = await getAllWorks();
@@ -27,7 +28,7 @@ export const getStaticProps = async ({ params }) => {
 const Works = ({works}) => {
    return (
     <>
-      <h1>Post</h1>
+      <Navbar/>
       <div  className={styles.works}>
         <ReactMarkdown>{works.markdown}</ReactMarkdown>
       </div>

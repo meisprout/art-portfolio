@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import { getAllWorks } from '../lib/notion'
-import styles from '../styles/Home.module.css'
+import styles from '../styles/Works.module.css'
 import Navbar from './navbar'
 
 

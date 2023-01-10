@@ -8,10 +8,11 @@ import { Client } from "@notionhq/client";
 const notion = new Client({
   auth: process.env.NOTION_API_KEY,
 })
+
 export default async (req,res)=>{
-  const response = await notion.databases.query({ 
-    database_id: process.env.NOTION_HOME,
+  const response = await notion.pages.retrieve({ 
+    page_id: process.env.NOTION_ABOUT,
   });
-  const allHome = response.results;
-  res.status(200).json(allHome[0].properties.Image.files[0].file.url);
+  const allHome = response;
+  res.status(200).json(allHome);
 }

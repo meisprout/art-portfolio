@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import React from 'react';
 import ReactMarkdown from 'react-markdown'
 import { getAllWorks, getSinglePost } from "../../lib/notion"
@@ -28,8 +29,13 @@ export const getStaticProps = async ({ params }) => {
 const Works = ({works}) => {
    return (
     <>
+      <Head>
+        <title>Loafsprout - Art Portfolio</title>
+        <meta name="description" content="Loafsprout is a Filipino artist who specializes in semi-realistic portraits."/>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
       <Navbar/>
-      <div  className={styles.works}>
+      <div className={styles.works}>
         <ReactMarkdown>{works.markdown}</ReactMarkdown>
       </div>
     </>

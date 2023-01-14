@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Link from 'next/link'
+import Image from 'next/image'
 import { getAllWorks, getLanding, getSection } from '../lib/notion'
 import styles from '../styles/Home.module.css'
 import Navbar from './navbar'
@@ -28,7 +29,7 @@ export default function Home({...props}) {
       <Navbar/>
       <main className={styles.main}>
         <header className={styles.header}>
-          <img src={props.hero.cover}/>
+        <Image loader={() => props.hero.cover} src={props.hero.cover} layout="fill" objectFit="cover" loading='lazy'/>
           <div className={styles.heading}>
             <h1>{props.hero.title}</h1>
             <p>{props.hero.description}</p>
@@ -42,7 +43,7 @@ export default function Home({...props}) {
             <Link href='/commissions' class="button white-btn">See commission details</Link>
           </div>
           <div className={styles.container}>
-            <img src={props.section.cover}/>
+            <Image loader={() => props.section.cover} src={props.section.cover} layout="fill" objectFit="cover" loading='lazy'/>
           </div>
           
         </section>

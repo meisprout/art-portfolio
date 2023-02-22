@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import Navbar from './navbar'
+import Footer from '../components/footer'
+import Navbar from '../components/navbar'
 import { getAbout, getAboutPage } from '../lib/notion'
 import ReactMarkdown from 'react-markdown'
 import styles from '../styles/About.module.css'

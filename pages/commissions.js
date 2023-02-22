@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import Navbar from './navbar'
+import Footer from '../components/footer'
+import Navbar from '../components/navbar'
 
 export default function Commissions() {
   return (

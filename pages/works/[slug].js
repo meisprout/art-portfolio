@@ -3,7 +3,8 @@ import React from 'react';
 import ReactMarkdown from 'react-markdown'
 import { getAllWorks, getSinglePost } from "../../lib/notion"
 import styles from '../../styles/Works.module.css'
-import Navbar from '../navbar'
+import Footer from '../components/footer'
+import Navbar from '../components/navbar'
 
 export const getStaticPaths = async () => {
     const posts = await getAllWorks();

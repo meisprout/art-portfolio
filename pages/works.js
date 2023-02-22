@@ -8,16 +8,18 @@ import Navbar from './navbar'
 
 export const getStaticProps = async () => {
   const data = await getAllContact()
+  const contact = await getAllContact()
 
   return {
     props: {
       works: data,
+      contact:contact,
     },
     revalidate: 60
   };
 }
 
-export default function Works({works}) {
+export default function Works({...props}) {
   return (
     <>
       <Head>
@@ -28,13 +30,13 @@ export default function Works({works}) {
       <main className={styles.main}>
       <Navbar/>
       <h1>Works</h1>
-        {works.map((wrk,index)=>(
+        {props.works.map((wrk,index)=>(
           <div key={index}>
             <Link href={`works/${wrk.slug}`}>{wrk.title}</Link>
           </div>
         ))}
       </main>
-      <Footer/>
+      <Footer data={props.contact}/>
     </>
   )
 }

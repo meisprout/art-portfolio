@@ -2,8 +2,8 @@ import Head from 'next/head'
 import Link from 'next/link'
 import { getAllWorks, getAllContact } from '../lib/notion'
 import styles from '../styles/Works.module.css'
-import Footer from './footer'
-import Navbar from './navbar'
+import Footer from '../components/footer'
+import Navbar from '../components/navbar'
 
 
 export const getStaticProps = async () => {

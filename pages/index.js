@@ -4,7 +4,7 @@ import Image from 'next/image'
 import { getAllContact, getLanding, getSection } from '../lib/notion'
 import styles from '../styles/Home.module.css'
 import Navbar from './navbar'
-import Footer from './footer'
+import Footer from '../components/footer'
 
 export const getStaticProps = async () => {
   const hero = await getLanding()

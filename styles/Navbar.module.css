@@ -1,0 +1,50 @@
+.nav{
+    display: flex;
+    justify-content: space-between;
+    margin:1rem;
+}
+
+.nav ul{
+    list-style: none;
+    display: none;
+    gap:4rem;
+}
+
+.nav li:first-of-type{
+    cursor: pointer;
+}
+
+.nav a{
+    text-decoration: none;
+}
+
+.logo{
+    width:10rem;
+    border-radius: 0%;
+}
+
+.dropdown{
+    display: flex;
+    background-color:#F5F4EB;
+    border: 3px solid #5D3D87;
+    position: absolute;
+    z-index: 1;
+    top:50px;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.dropdown a{
+    padding:1rem;
+}
+
+.dropdown a:hover{
+    background-color: #5D3D87;
+    color: #F5F4EB;
+}
+
+@media screen and (min-width:600px){
+    .nav ul{
+        display:flex;
+    }
+}

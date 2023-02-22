@@ -14,13 +14,13 @@ export default function Footer({data}) {
 
             <ul className={styles.linkset}>
             {
-              data.slice(0,1).map((ctc)=>(
-                <li><Link title="loafsprout@gmail.com" href={`mailto:${ctc.link}`}>{ctc.account}</Link></li>
+              data.slice(0,1).map((ctc, index)=>(
+                <li key={index}><Link title="loafsprout@gmail.com" href={`mailto:${ctc.link}`}>{ctc.account}</Link></li>
               ))
             }
             {
-              data.slice(1).map((ctc)=>(
-                <li><Link href={`${ctc.link}`}>{ctc.account}</Link></li>
+              data.slice(1).map((ctc, index)=>(
+                <li key={index}><Link href={`${ctc.link}`}>{ctc.account}</Link></li>
               ))
             }
               

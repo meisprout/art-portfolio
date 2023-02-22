@@ -7,7 +7,7 @@ import Navbar from './navbar'
 
 
 export const getStaticProps = async () => {
-  const data = await getAllContact()
+  const data = await getAllWorks()
   const contact = await getAllContact()
 
   return {
@@ -35,8 +35,8 @@ export default function Works({...props}) {
             <Link href={`works/${wrk.slug}`}>{wrk.title}</Link>
           </div>
         ))}
+        <Footer data={props.contact}/>
       </main>
-      <Footer data={props.contact}/>
     </>
   )
 }

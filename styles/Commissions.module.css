@@ -1,0 +1,54 @@
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem;
+}
+
+.ratesection{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    text-align: center;
+    gap:1rem;
+    line-height: 0.5;
+}
+
+.rates{
+    display: flex;
+    align-items: center;
+    gap:1rem;
+}
+
+.ratestext{
+    text-align: left;
+}
+
+.container{
+    height:60vh;
+    width:50vw;
+    position: relative;
+}
+
+.container img{
+    border-radius: 10rem;
+}
+
+@media screen and (min-width:600px){
+    .ratesection{
+        grid-template-columns: repeat(3,1fr);
+        gap:5rem;
+        line-height: 1;
+    }
+    
+    .rates{
+        flex-direction: column;
+    }
+    
+    .ratestext{
+        text-align: center;
+    }
+    .container{
+        height:30vw;
+        width:20vw;
+    }
+}

@@ -20,20 +20,15 @@ export default function Navbar() {
   const openDisplay=()=>{
     defDisplay(!display);
   }
+  const closeDisplay=()=>{
+    defDisplay(false);
+  }
 
     return (
       <nav className={styles.nav}>
         <Link href="/"><img src="/logo.svg" className={styles.logo}></img></Link>
         <ul>
-            <li onMouseOver={openDisplay}><Link href="/works">Works</Link></li>
-              {
-                display ? 
-                <div className={styles.dropdown}>
-                  <Link href="/works/personal-works">Personal Works</Link>
-                  <Link href="/works/commission-works">Commissions</Link>
-                </div>
-              : null
-              }
+            <li><Link href="/works">Works</Link></li>
             <li><Link href="/commissions">Commission Info</Link></li>
             <li><Link href="/about">About</Link></li>
         </ul>

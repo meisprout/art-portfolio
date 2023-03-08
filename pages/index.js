@@ -32,7 +32,7 @@ export default function Home({...props}) {
       <Navbar/>
       <main className={styles.main}>
         <header className={styles.header}>
-        <Image src={props.hero.cover} alt="girl with purple hair and eyes" layout="fill" objectFit="cover" loading='lazy'/>
+        <Image src={props.hero.cover} alt="girl with purple hair and eyes" layout="fill" objectFit="cover"/>
           <div className={styles.heading}>
             <h1>{props.hero.title}</h1>
             <p>{props.hero.description}</p>
@@ -46,7 +46,7 @@ export default function Home({...props}) {
             <Link href='/commissions' className="button white-btn">See commission details</Link>
           </div>
           <div className={styles.container}>
-            <Image src={props.section.cover} alt="a girl with dark skin and green hair and a girl with white skin and blonde hair" layout="fill" objectFit="cover" loading='lazy'/>
+            <Image src={props.section.cover} alt="a girl with dark skin and green hair and a girl with white skin and blonde hair" layout="fill" objectFit="cover"/>
           </div>
         </section>
       </main>

@@ -5,13 +5,17 @@
     text-align: center;
 }
 
-.works p{
-    margin:0;
-    margin-bottom: 1rem;
+.container{
+    width: 100%;
 }
 
-.works img{
+
+.container .workimg{
+    object-fit: contain;
     width: 100%;
+    position: relative !important;
+    height: unset;
+    margin-bottom: 1rem;
 }
 
 @media screen and (min-width:600px){

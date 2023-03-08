@@ -1,19 +1,22 @@
 import Head from 'next/head'
 import Link from 'next/link'
+import Image from 'next/image'
 import Footer from '../components/footer'
 import Navbar from '../components/navbar'
-import { getAbout, getAboutPage } from '../lib/notion'
+import { getAbout, getAboutPage, getAllContact } from '../lib/notion'
 import ReactMarkdown from 'react-markdown'
 import styles from '../styles/About.module.css'
 
 export const getStaticProps = async () => {
   const about = await getAboutPage()
   const aboutHeading = await getAbout()
+  const contact = await getAllContact()
 
   return {
     props: {
       about: about,
-      heading: aboutHeading
+      heading: aboutHeading,
+      contact: contact,
     },
     revalidate: 60
   };
@@ -30,13 +33,14 @@ export default function About({...props}) {
       <Navbar/>
       <main className={styles.main}>
       <div className={styles.container}>
-        <img src={props.heading.properties.Image.files[0].file.url}/>
+        <Image src={props.heading.properties.Image.files[0].file.url} layout="fill" objectFit="cover"/>
       </div>
       <article className={styles.content}>
         <h1>{props.heading.properties.Name.title[0].plain_text}</h1>
         <ReactMarkdown>{props.about.markdown}</ReactMarkdown>
       </article>
       </main>
+      <Footer data={props.contact}/>
     </>
   )
 }

@@ -1,6 +1,5 @@
 import Head from 'next/head'
-import React from 'react';
-import ReactMarkdown from 'react-markdown'
+import Image from 'next/image'
 import { getAllWorks, getAllContact } from "../lib/notion"
 import styles from '../styles/Works.module.css'
 import Footer from '../components/footer'
@@ -31,7 +30,13 @@ const Works = ({...props}) => {
       <main className={styles.main}>
         <h1>Works</h1>
         <div className={styles.works}>
-          <ReactMarkdown>{props.works.markdown}</ReactMarkdown>
+        {
+          props.works.map((wrk, index)=>(
+                <div key={index} className={styles.container}>
+                  <Image layout="fill" src={wrk.image} alt={wrk.title} className={styles.workimg}/>
+                </div>
+              ))
+        }
         </div>
       </main>
       <Footer data={props.contact}/>

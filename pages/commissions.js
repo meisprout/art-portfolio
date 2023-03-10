@@ -89,7 +89,7 @@ export default function Commissions({...props}) {
           </div>
 
           <div>
-            <h2>Won't Draw</h2>
+            <h2>Won&apos;t Draw</h2>
             <ReactMarkdown>{props.wontdraw.markdown}</ReactMarkdown>
           </div>
           

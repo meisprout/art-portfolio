@@ -30,16 +30,22 @@ export default function About({...props}) {
         <meta name="description" content="Loafsprout is a Filipino artist who specializes in semi-realistic portraits."/>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
+
       <Navbar/>
+
       <main className={styles.main}>
-      <div className={styles.container}>
-        <Image src={props.heading.properties.Image.files[0].file.url} alt="art of girl with short dark hair and yellow shirt" layout="fill" objectFit="cover"/>
-      </div>
-      <article className={styles.content}>
-        <h1>{props.heading.properties.Name.title[0].plain_text}</h1>
-        <ReactMarkdown>{props.about.markdown}</ReactMarkdown>
-      </article>
+
+        <div className={styles.container}>
+          <Image src={props.heading.properties.Image.files[0].file.url} alt="art of girl with short dark hair and yellow shirt" layout="fill" objectFit="cover"/>
+        </div>
+
+        <article className={styles.content}>
+          <h1>{props.heading.properties.Name.title[0].plain_text}</h1>
+          <ReactMarkdown>{props.about.markdown}</ReactMarkdown>
+        </article>
+
       </main>
+      
       <Footer data={props.contact}/>
     </>
   )

@@ -29,27 +29,34 @@ export default function Home({...props}) {
         <meta name="description" content="Loafsprout is a Filipino artist who specializes in semi-realistic portraits."/>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
+
       <Navbar/>
+
       <main className={styles.main}>
+
         <header className={styles.header}>
-        <Image src={props.hero.cover} alt="girl with purple hair and eyes" layout="fill" objectFit="cover"/>
+          <Image src={props.hero.cover} alt="girl with purple hair and eyes" layout="fill" objectFit="cover"/>
           <div className={styles.heading}>
             <h1>{props.hero.title}</h1>
             <p>{props.hero.description}</p>
             <Link href='/works' className="button purple-btn">See my work</Link>
           </div>
         </header>
+
         <section className={styles.section}>
           <div className={styles.content}>
             <h2>{props.section.title}</h2>
             <p>{props.section.description}</p>
             <Link href='/commissions' className="button white-btn">See commission details</Link>
           </div>
+
           <div className={styles.container}>
             <Image src={props.section.cover} alt="a girl with dark skin and green hair and a girl with white skin and blonde hair" layout="fill" objectFit="cover"/>
           </div>
         </section>
+
       </main>
+
       <Footer data={props.contact}/>
     </>
   )

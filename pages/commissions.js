@@ -38,11 +38,15 @@ export default function Commissions({...props}) {
         <meta name="description" content="Loafsprout is a Filipino artist who specializes in semi-realistic portraits."/>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
+
       <Navbar/>
+
       <main className={styles.main}>
         <h1>Commission Info</h1>
+
         <section>
           <h2>Rates</h2>
+
           <div className={styles.ratecontainer}>
             {
               props.rates.map((rts, index)=>(
@@ -58,11 +62,12 @@ export default function Commissions({...props}) {
                 </div>
               ))
             }
-            </div>
+          </div>
         </section>
 
         <section className={styles.addfees}>
           <h2>Additional Fees</h2>
+
           <div className={styles.addfeescontainer}>
           {
              props.addfees.map((add, index)=>(
@@ -74,7 +79,6 @@ export default function Commissions({...props}) {
               ))
           }
           </div>
-            
         </section>
 
         <section className={styles.payinfo}>

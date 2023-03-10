@@ -26,9 +26,12 @@ const Works = ({...props}) => {
         <meta name="description" content="Loafsprout is a Filipino artist who specializes in semi-realistic portraits."/>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
+
       <Navbar/>
+
       <main className={styles.main}>
         <h1>Works</h1>
+
         <div className={styles.works}>
         {
           props.works.map((wrk, index)=>(
@@ -38,7 +41,9 @@ const Works = ({...props}) => {
               ))
         }
         </div>
+
       </main>
+      
       <Footer data={props.contact}/>
     </>
   )

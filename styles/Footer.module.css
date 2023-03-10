@@ -1,17 +1,37 @@
-.main{
+.main, .maininfo{
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main{
     margin: 2rem;
 }
 
+.container{
+    height:8rem;
+    width:50vw;
+    position: relative;
+}
+
 .logo{
-    width:40vw;
     border-radius: 0%;
 }
 
 .linkset{
+    padding:0;
     list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap:1rem;
 }
+.linkset li{
+    margin:1rem 0;
+}
+
+@media screen and (min-width:600px){
+    .linkset{
+        display: flex;
+        gap:2rem;
+    }
+    .linkset li{
+        margin:0;
+    }
+  }

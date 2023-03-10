@@ -23,6 +23,10 @@
     text-align: left;
 }
 
+.ratestext p{
+    font-size: 1.25rem;
+}
+
 .container{
     height:60vh;
     width:50vw;
@@ -123,6 +127,11 @@
     .ratestext{
         text-align: center;
     }
+
+    .ratestext p{
+        font-size: 1.5rem;
+    }
+    
     .container{
         height:30vw;
         width:25vw;

@@ -26,7 +26,7 @@ export const getStaticProps = async () => {
       wontdraw: wontdraw,
       toc: toc
     },
-    revalidate: 60
+    revalidate: 10
   };
 }
 
@@ -57,7 +57,7 @@ export default function Commissions({...props}) {
 
                   <div className={styles.ratestext}>
                     <h2>{rts.name}</h2>
-                    <span className={styles.price}>{rts.pesos} PHP/ {rts.dollars} USD</span>
+                    <p>{rts.pesos} PHP/ {rts.dollars} USD</p>
                   </div>
                 </div>
               ))

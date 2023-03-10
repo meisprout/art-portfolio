@@ -14,7 +14,7 @@ export const getStaticProps = async () => {
       works: works,
       contact: contact
     },
-    revalidate: 60
+    revalidate: 10
   };
 }
 

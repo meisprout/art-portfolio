@@ -6,7 +6,13 @@ const nextConfig = {
 module.exports = {
   reactStrictMode: true,
   images:{
-    domains:['s3.us-west-2.amazonaws.com'],
-    formats: ["image/webp"],
-  }
+    //domains:['s3.us-west-2.amazonaws.com','loafsprout.vercel.app'],
+    //formats: ["image/webp"],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 's3.us-west-2.amazonaws.com',
+      },
+    ],
+  },
 }

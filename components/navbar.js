@@ -4,17 +4,6 @@ import { useState } from 'react';
 import { getAllWorks } from '../lib/notion';
 import Image from 'next/image';
 
-export const getStaticProps = async () => {
-  const data = await getAllWorks()
-
-  return {
-    props: {
-      works: data,
-    },
-    revalidate: 60
-  };
-}
-
 export default function Navbar() {
     
     return (

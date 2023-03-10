@@ -18,7 +18,7 @@ export const getStaticProps = async () => {
       heading: aboutHeading,
       contact: contact,
     },
-    revalidate: 60
+    revalidate: 10
   };
 }
 

@@ -36,7 +36,7 @@ export default function About({...props}) {
       <main className={styles.main}>
 
         <div className={styles.container}>
-          <Image loader={() => props.heading.properties.Image.files[0].file.url} src={props.heading.properties.Image.files[0].file.url} alt="art of girl with short dark hair and yellow shirt" layout="fill" objectFit="cover"/>
+          <img src={props.heading.properties.Image.files[0].file.url} alt="art of girl with short dark hair and yellow shirt"/>
         </div>
 
         <article className={styles.content}>

@@ -14,19 +14,7 @@ export default async (req,res)=>{
     database_id: process.env.NOTION_COM_RATES,
 });
   const allHome = response.results;
-  
-  return allHome.map((ctc)=>{
-   res.status(200).json(getContactData(ctc));
- })
-  //res.status(200).json(allHome);
- 
-}
 
-const getContactData = (data) => {
-return {
-  id: data.id,
-  name:data.properties.Name.title[0].plain_text,
-  sample:data.properties.Sample.files[0].file,
-  pesos:data.properties['Price (PHP)'].number,
-};
+  res.status(200).json(allHome);
+ 
 }

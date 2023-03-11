@@ -1,5 +1,6 @@
 import Head from 'next/head'
-import Image from 'next/image'
+/* eslint-disable @next/next/no-img-element */
+
 import { getAllWorks, getAllContact } from "../lib/notion"
 import styles from '../styles/Works.module.css'
 import Footer from '../components/footer'
@@ -36,7 +37,7 @@ const Works = ({...props}) => {
         {
           props.works.map((wrk, index)=>(
                 <div key={index} className={styles.container}>
-                  <Image layout="fill" loader={() => wrk.image} src={wrk.image} alt={wrk.title} className={styles.workimg}/>
+                  <img src={wrk.image} alt={wrk.title} className={styles.workimg}/>
                 </div>
               ))
         }

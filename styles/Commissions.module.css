@@ -34,6 +34,9 @@
 }
 
 .container img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
     border-radius: 10rem;
 }
 
@@ -131,7 +134,7 @@
     .ratestext p{
         font-size: 1.5rem;
     }
-    
+
     .container{
         height:30vw;
         width:25vw;

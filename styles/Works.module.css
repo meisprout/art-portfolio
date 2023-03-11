@@ -9,12 +9,8 @@
     width: 100%;
 }
 
-
 .container .workimg{
-    object-fit: contain;
     width: 100%;
-    position: relative !important;
-    height: unset;
     margin-bottom: 1rem;
 }
 

@@ -6,7 +6,9 @@ const nextConfig = {
 module.exports = {
   reactStrictMode: true,
   images:{
-    domains:['s3.us-west-2.amazonaws.com'],
+    domains:['https://notion.so',
+    'https://s3.us-west-2.amazonaws.com/',
+    'secure.notion-static.com'],
     formats: ["image/webp"],
   },
 }

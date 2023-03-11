@@ -52,7 +52,7 @@ export default function Commissions({...props}) {
               props.rates.map((rts, index)=>(
                 <div key={index} className={styles.rates}>
                   <div className={styles.container}>
-                    <Image loader={() => rts.sample} alt ={rts.description} src={rts.sample} layout="fill" objectFit="cover" loading='lazy'/>
+                    <img alt ={rts.description} src={rts.sample}/>
                   </div>
 
                   <div className={styles.ratestext}>

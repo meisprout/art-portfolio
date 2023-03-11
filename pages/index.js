@@ -35,7 +35,7 @@ export default function Home({...props}) {
       <main className={styles.main}>
 
         <header className={styles.header}>
-          <Image loader={() => props.hero.cover} src={props.hero.cover} alt="girl with purple hair and eyes" layout="fill" objectFit="cover"/>
+          <img src={props.hero.cover} alt="girl with purple hair and eyes"/>
           <div className={styles.heading}>
             <h1>{props.hero.title}</h1>
             <p>{props.hero.description}</p>
@@ -51,7 +51,7 @@ export default function Home({...props}) {
           </div>
 
           <div className={styles.container}>
-            <Image loader={() => props.section.cover} src={props.section.cover} alt="a girl with dark skin and green hair and a girl with white skin and blonde hair" layout="fill" objectFit="cover"/>
+            <img src={props.section.cover} alt="a girl with dark skin and green hair and a girl with white skin and blonde hair"/>
           </div>
         </section>
 

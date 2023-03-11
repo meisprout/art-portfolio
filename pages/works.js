@@ -14,7 +14,7 @@ export const getStaticProps = async () => {
       works: works,
       contact: contact
     },
-    revalidate: 10
+    revalidate: 60
   };
 }
 
@@ -36,7 +36,7 @@ const Works = ({...props}) => {
         {
           props.works.map((wrk, index)=>(
                 <div key={index} className={styles.container}>
-                  <Image layout="fill" src={wrk.image} alt={wrk.title} className={styles.workimg}/>
+                  <Image layout="fill" loader={() => wrk.image} src={wrk.image} alt={wrk.title} className={styles.workimg}/>
                 </div>
               ))
         }

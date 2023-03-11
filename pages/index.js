@@ -17,7 +17,7 @@ export const getStaticProps = async () => {
       section: section,
       contact: contact
     },
-    revalidate: 10
+    revalidate: 60
   };
 }
 
@@ -35,7 +35,7 @@ export default function Home({...props}) {
       <main className={styles.main}>
 
         <header className={styles.header}>
-          <Image src={props.hero.cover} alt="girl with purple hair and eyes" layout="fill" objectFit="cover"/>
+          <Image loader={() => props.hero.cover} src={props.hero.cover} alt="girl with purple hair and eyes" layout="fill" objectFit="cover"/>
           <div className={styles.heading}>
             <h1>{props.hero.title}</h1>
             <p>{props.hero.description}</p>
@@ -51,7 +51,7 @@ export default function Home({...props}) {
           </div>
 
           <div className={styles.container}>
-            <Image src={props.section.cover} alt="a girl with dark skin and green hair and a girl with white skin and blonde hair" layout="fill" objectFit="cover"/>
+            <Image loader={() => props.section.cover} src={props.section.cover} alt="a girl with dark skin and green hair and a girl with white skin and blonde hair" layout="fill" objectFit="cover"/>
           </div>
         </section>
 

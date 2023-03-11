@@ -18,7 +18,7 @@ export const getStaticProps = async () => {
       heading: aboutHeading,
       contact: contact,
     },
-    revalidate: 10
+    revalidate: 60
   };
 }
 
@@ -36,7 +36,7 @@ export default function About({...props}) {
       <main className={styles.main}>
 
         <div className={styles.container}>
-          <Image src={props.heading.properties.Image.files[0].file.url} alt="art of girl with short dark hair and yellow shirt" layout="fill" objectFit="cover"/>
+          <Image loader={() => props.heading.properties.Image.files[0].file.url} src={props.heading.properties.Image.files[0].file.url} alt="art of girl with short dark hair and yellow shirt" layout="fill" objectFit="cover"/>
         </div>
 
         <article className={styles.content}>

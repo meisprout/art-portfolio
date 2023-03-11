@@ -26,7 +26,7 @@ export const getStaticProps = async () => {
       wontdraw: wontdraw,
       toc: toc
     },
-    revalidate: 10
+    revalidate: 60
   };
 }
 

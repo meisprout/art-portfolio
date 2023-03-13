@@ -7,7 +7,7 @@ import Footer from '../components/footer'
 import Navbar from '../components/navbar'
 import ReactMarkdown from 'react-markdown'
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
   const rates = await getRates()
   const contact = await getAllContact()
   const addfees = await getAddtlFees()
@@ -25,8 +25,7 @@ export const getStaticProps = async () => {
       willdraw: willdraw,
       wontdraw: wontdraw,
       toc: toc
-    },
-    revalidate: 60
+    }
   };
 }
 

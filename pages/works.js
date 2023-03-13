@@ -6,7 +6,7 @@ import styles from '../styles/Works.module.css'
 import Footer from '../components/footer'
 import Navbar from '../components/navbar'
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
   const works = await getAllWorks()
   const contact = await getAllContact()
 
@@ -14,8 +14,7 @@ export const getStaticProps = async () => {
     props: {
       works: works,
       contact: contact
-    },
-    revalidate: 60
+    }
   };
 }
 

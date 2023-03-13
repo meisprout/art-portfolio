@@ -7,7 +7,7 @@ import { getAbout, getAboutPage, getAllContact } from '../lib/notion'
 import ReactMarkdown from 'react-markdown'
 import styles from '../styles/About.module.css'
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
   const about = await getAboutPage()
   const aboutHeading = await getAbout()
   const contact = await getAllContact()
@@ -17,8 +17,7 @@ export const getStaticProps = async () => {
       about: about,
       heading: aboutHeading,
       contact: contact,
-    },
-    revalidate: 60
+    }
   };
 }
 
